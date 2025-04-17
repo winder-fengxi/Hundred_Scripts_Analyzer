@@ -1,0 +1,24 @@
+# 数据相关路径
+data:
+  # 根数据目录，下面应有 author/ 和 user/ 两个子目录
+  root_dir: "./dataset"
+  author_dir: "author"
+  user_dir:  "user"
+  # 图片统一尺寸
+  img_size: 64
+
+# 模型参数
+model:
+  style_dim:   512
+  content_dim: 256
+
+# 各种存储路径
+paths:
+  # 存放风格向量库的目录（可自动创建）
+  style_lib_dir: "./style_lib"
+
+# 训练超参数
+train:
+  batch_size: 16
+  num_epochs: 20
+  lr:         0.0002
