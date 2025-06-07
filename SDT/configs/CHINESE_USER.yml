@@ -1,0 +1,26 @@
+MODEL:
+  ENCODER_LAYERS: 2
+  WRI_DEC_LAYERS: 2
+  GLY_DEC_LAYERS: 2
+  NUM_HEAD_LAYERS: 1
+  NUM_IMGS: 15
+NUM_GPUS: 1  # TODO, support multi GPUs
+SOLVER:
+  BASE_LR: 0.0002
+  MAX_ITER: 200000
+  WARMUP_ITERS: 20000
+  TYPE: Adam  # TODO, support optional optimizer
+  GRAD_L2_CLIP: 5.0
+
+TEST:
+  ISTRAIN: False
+  IMG_H: 64
+  IMG_W: 64
+DATA_LOADER:
+  NUM_THREADS: 8
+  TYPE: UserDataset            
+  PATH: data/Chinese_user
+  DATASET: CHINESE
+
+TRAIN:
+  IMS_PER_BATCH: 64             
